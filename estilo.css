@@ -1,0 +1,12 @@
+.cabecalho{
+   background-color: rgb(25, 25, 25);
+   max-width: 1000px;
+}
+body{
+    background-image: url(Fundos/BACKGROUND\ PRINCIPAL.jpg);
+    background-size: cover;
+}
+#logo{
+    width: 180px;
+    height: 180px;
+}
