@@ -35,6 +35,13 @@
 p{
     padding-right: 400px;
 }
+.buttonheader{
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: rgb(225, 225, 225);
+    cursor: pointer;
+}
 .active{
     background-color: rgb(39, 39, 39);
     border-radius: 10px;
@@ -44,8 +51,28 @@ body{
     background-image: url(Fundos/BACKGROUND\ PRINCIPAL.jpg);
     background-size: cover;
     font-family:'Times New Roman', Times, serif;
-    color: white;
+    color: rgb(225, 225, 225);
 }
 #logo{
     width:75px;
+}
+@media screen and (max-width:768px){
+    .buttonheader{
+        display: block;
+    }
+    .navigation{
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: rgb(30, 30, 30);
+        height: 100%;
+        width: 35vw;
+        padding: 16px;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+}
+@keyframes showSidebar {
+    from{margin-left: -100vw;}
+    top{margin-left: -10vw;}
 }
