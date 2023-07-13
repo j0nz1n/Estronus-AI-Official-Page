@@ -16,12 +16,18 @@
     background-color: rgb(25, 25, 25);
     align-items: center;
     gap: 48px;
+    animation-duration: 1s;
+    z-index: 2;
 }
 .navigation a{
     text-decoration: none;
     color:rgb(225, 225, 225);
     transition: 1s;
     font-weight: bold;
+}
+.navigation a:hover{
+    color:rgb(225, 225, 225);
+    text-shadow: #dcb146 0px 0px 5px, #946e0e 0px 0px 10px;
 }
 .fundo{
     background-color: rgba(40, 40, 40, 0.5);
@@ -33,7 +39,7 @@
     padding-right: 125px;
 }
 p{
-    padding-right: 400px;
+    max-width: 550px;
 }
 .buttonheader{
     display: none;

@@ -33,7 +33,7 @@
     </div>
 
     <div class="fundo" id="fundo">
-        <div class="conteudo" id="conteudo">
+        <div tabindex="0" onclick="closeSidebar()" class="conteudo" id="conteudo">
             <h1>EstronusWiki</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Fugit reiciendis ipsam natus tempora, quia delectus sed, 
@@ -66,10 +66,27 @@ function toggleSidebar()
     showSidebar = !showSidebar;
     if(showSidebar){
         navigation.style.marginLeft = '-10vw';
+        navigation.style.animationName = 'showSidebar';
+        conteudo.style.filter = 'blur(2px)';
     }else{
         navigation.style.marginLeft = '-100vw';
+        navigation.style.animationName = '';
+        conteudo.style.filter = '';
     }
 }
+function closeSidebar()
+{
+    if(showSidebar){
+        toggleSidebar();
+    }
+
+}
+window.addEventListener('resize', function(event){
+
+    if(window.innerWidth > 768 && showSidebar){
+        toggleSidebar();
+    }
+});
 
 </script>
 </html>
