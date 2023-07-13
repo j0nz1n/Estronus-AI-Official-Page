@@ -39,6 +39,7 @@
     padding-right: 125px;
 }
 p{
+    text-align: justify;
     max-width: 550px;
 }
 .buttonheader{
@@ -51,16 +52,22 @@ p{
 .active{
     background-color: rgb(39, 39, 39);
     border-radius: 10px;
-    padding: 16px;
+    padding: 18.7px;
 }
-body{
-    background-image: url(Fundos/BACKGROUND\ PRINCIPAL.jpg);
-    background-size: cover;
-    font-family:'Times New Roman', Times, serif;
-    color: rgb(225, 225, 225);
-}
+
 #logo{
     width:75px;
+}
+#footer{
+    display: none;
+    height: 56px;
+    background-color: rgb(25, 25, 25);
+}
+#footer2{
+    display: none;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(14, 14, 14);
 }
 @media screen and (max-width:768px){
     .buttonheader{
