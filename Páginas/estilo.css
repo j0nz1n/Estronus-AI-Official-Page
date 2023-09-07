@@ -30,18 +30,20 @@
     text-shadow: #dcb146 0px 0px 5px, #946e0e 0px 0px 10px;
 }
 .fundo{
+    position: absolute;
     background-color: rgba(40, 40, 40, 0.5);
-    height: 1000px;
+    height: 100%;
+    width: 100%;
 }
 .conteudo{
-    padding-top: 50px;
-    padding-left: 125px;
-    padding-right: 125px;
-}
-p{
+    padding-top: 3%;
+    padding-left: 3%;
+    max-block-size: 100%;
     text-align: justify;
-    max-width: 550px;
+    max-height: 100%;
+    max-width: 60%;
 }
+
 .buttonheader{
     display: none;
     background-color: transparent;
@@ -58,23 +60,53 @@ p{
 #logo{
     width:75px;
 }
-#footer{
-    display: none;
-    height: 56px;
-    background-color: rgb(25, 25, 25);
+
+h1:hover{
+    text-shadow: #12638f 0px 0px 5px, #46c2de 0px 0px 10px;
+    transition: .4s;
+    cursor:default;
 }
-#footer2{
-    display: none;
-    height: 40px;
-    text-align: center;
-    background-color: rgb(14, 14, 14);
+#listaconteudos{
+    padding-top: 3%;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 25px;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+#listaconteudos a{
+    text-decoration: underline;
+    color: white;
+}
+#ilustration{
+    position: absolute;
+    width: 480px;
+    margin-left: 50%;
+    border: 5px;
+    border-radius: 15px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    box-shadow: 15px 15px 15px 0px rgba(0,0,0,0.75);
+}
+#conteudo p {
+    max-width: 70%;
+    display: flex;
+}
+.conteudohome{
+    text-align: justify;
+    padding-top: 3%;
+    padding-left: 3%;
+    max-height: 100%;
+    max-width: 55%;
 }
 @media screen and (max-width:768px){
     .buttonheader{
         display: block;
     }
     .navigation{
-        position: absolute;
+        position:fixed;
         flex-direction: column;
         top: 0;
         background-color: rgb(30, 30, 30);

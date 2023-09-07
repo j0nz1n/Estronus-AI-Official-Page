@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstronusWiki</title>
+    <link rel="stylesheet" href="/Páginas/estilo.css">
+</head>
+
+<style>
+    body{
+    background-size: 100%;
+    background-color: rgb(43, 43, 43);
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(225, 225, 225);
+    }
+</style>
+
+<body>
+    <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="buttonheader">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+        </button>
+        <div class="logo">
+            <img src="/Páginas/Logos/EW.png" alt="Logo EW" id="logo">
+        </div>
+
+        <div class="navigation" id="navigation">
+            <button onclick="toggleSidebar()" class="buttonheader">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-octagon" viewBox="0 0 16 16">
+                    <path d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z"/>
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+            </button>
+            <a href="/Páginas/homepage.html">Home</a>
+            <a href="/Páginas/personagens.html">Personagens</a>
+            <a href="/Páginas/mundo.html">Mundo</a>
+            <a href="/Páginas/criaturas.html">Criaturas</a>
+            <a href="/Páginas/sobre.html">Sobre</a>
+        </div>
+    </div>
+
+    
+        <div tabindex="0" onclick="closeSidebar()" class="conteudo" id="conteudo">
+            
+            <h1>Alondo, A Cidade Gótica</h1><br>
+
+            <img id="ilustration" src="/Páginas/Fundos/Alondo.jpg" alt="Alondo">
+
+            <p>Alondo é uma cidade envolta em sombras e segredos, situada em uma planície sombria e desolada. 
+                As ruas estreitas e escuras da cidade são pavimentadas com paralelepípedos gastos pelo tempo, 
+                e os edifícios antigos se inclinam ameaçadoramente sobre os transeuntes.</p><br>
+
+               <p> A cidade de Alondo respira uma atmosfera de noir, 
+                onde a neblina perpetua um clima de mistério e a chuva cai incessantemente, 
+                criando poças lamacentas nas vielas escuras. 
+                Lâmpadas de rua fracas e piscantes lançam sombras distorcidas nas fachadas dos prédios decadentes.</p><br>
+                
+                <p>Alondo é um refúgio para todos aqueles que vivem nas sombras da sociedade. Gangues, 
+                detetives particulares e criminosos habilidosos fazem parte do cenário urbano.
+                </p><br>
+
+                <p>No centro da cidade, a Praça das Sombras 
+                é um local sombrio onde estátuas de figuras enigmáticas parecem observar cada passo dos visitantes.
+                </p><br>
+
+                <p>A cidade abriga a infame Guilda dos Enigmas, uma sociedade secreta de investigadores, 
+                    cada um com seu próprio código de ética e segredos sombrios. 
+                    A Academia Obscura 
+                    treina os talentosos na arte de decifrar enigmas e magias proibidas.</p><br>
+                
+                    <p>Alondo é uma cidade onde as ruas têm olhos e os becos têm ouvidos, 
+                        onde a verdade está escondida nas sombras e as respostas são frequentemente
+                         mais perigosas do que as perguntas. Uma cidade onde o mistério são parte integrante da vida cotidiana, 
+                        e onde apenas os mais astutos e corajosos podem sobreviver e desvendar os segredos profundos que a envolvem.</p>
+                   
+        </div>
+   
+
+ 
+    
+</body>
+
+<script>
+
+var header = document.getElementById('header');
+var navigation = document.getElementById('navigation');
+var conteudo = document.getElementById('conteudo');
+var showSidebar = false;
+
+function toggleSidebar()
+{
+    showSidebar = !showSidebar;
+    if(showSidebar){
+        navigation.style.marginLeft = '-10vw';
+        navigation.style.animationName = 'showSidebar';
+        conteudo.style.filter = 'blur(2px)';
+    }else{
+        navigation.style.marginLeft = '-100vw';
+        navigation.style.animationName = '';
+        conteudo.style.filter = '';
+    }
+}
+function closeSidebar()
+{
+    if(showSidebar){
+        toggleSidebar();
+    }
+
+}
+window.addEventListener('resize', function(event){
+
+    if(window.innerWidth > 768 && showSidebar){
+        toggleSidebar();
+    }
+});
+
+</script>
+</html>
