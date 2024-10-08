@@ -100,7 +100,7 @@ h1:hover{
     max-height: 100%;
     max-width: 55%;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:1900px){
     .buttonheader{
         display: block;
     }
@@ -115,7 +115,13 @@ h1:hover{
         animation-duration: 1s;
         margin-left: -100vw;
     }
+    body {
+        background-image: url(Fundos/BACKGROUND\ PRINCIPAL.jpg); 
+        background-size: 5000px;
+        background-position: center;
+    }
 }
+
 @keyframes showSidebar {
     from{margin-left: -100vw;}
     top{margin-left: -10vw;}
